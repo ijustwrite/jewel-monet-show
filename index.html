@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Jewel Monet Show ✨ makeup, dance & main-character energy</title>
+<meta name="description" content="The Jewel Monet Show: makeup tips, national-champion dance life, the Vanity Project try-on studio, and J Monet's Closet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF4FA3; --pink-deep:#E22A86; --blush:#FFE3F1; --cream:#FFF8FC;
+    --plum:#3A1029; --plum-soft:#7A3B5E; --gold:#F0B93A; --white:#FFFFFF;
+    --radius:22px; --shadow:0 18px 50px -18px rgba(226,42,134,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Nunito",sans-serif;color:var(--plum);background:var(--cream);
+    background-image:
+      radial-gradient(700px 400px at 90% -5%, #FFD1E8 0%, transparent 60%),
+      radial-gradient(600px 380px at -10% 15%, #FFE9F4 0%, transparent 55%);
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:"Baloo 2",cursive;line-height:1.1}
+  img{max-width:100%;display:block}
+  a{color:var(--pink-deep)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(255,248,252,.92);
+    backdrop-filter:blur(10px);border-bottom:1px solid #FFD9EC;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1080px;margin:0 auto}
+  .brand{font-family:"Baloo 2",cursive;font-weight:800;font-size:1.15rem;color:var(--pink-deep);text-decoration:none}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap}
+  .nav-links a{text-decoration:none;font-weight:800;font-size:.85rem;color:var(--plum-soft)}
+  .nav-links a:hover{color:var(--pink-deep)}
+
+  /* hero */
+  header{padding:56px 0 30px}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+  .hero-badge{
+    display:inline-block;background:var(--white);border:2px solid var(--gold);
+    color:var(--plum);font-weight:800;font-size:.8rem;letter-spacing:.08em;
+    text-transform:uppercase;border-radius:999px;padding:7px 16px;margin-bottom:18px;
+    box-shadow:0 6px 18px -8px rgba(240,185,58,.6);
+  }
+  .hero h1{font-size:clamp(2.6rem,6vw,4.2rem);color:var(--plum)}
+  .hero h1 em{font-style:normal;color:var(--pink);display:block}
+  .hero p{margin-top:14px;font-size:1.1rem;color:var(--plum-soft);max-width:44ch}
+  .hero-cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:800;border-radius:999px;
+    padding:13px 26px;font-size:.95rem;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-pink{background:var(--pink);color:#fff;box-shadow:var(--shadow)}
+  .btn-ghost{background:#fff;color:var(--pink-deep);border:2px solid var(--pink)}
+  .hero-photo{position:relative}
+  .hero-photo img{
+    border-radius:32px;box-shadow:var(--shadow);
+    border:6px solid #fff;transform:rotate(2deg);
+  }
+  .hero-photo::after{
+    content:"💖 national champ energy";position:absolute;bottom:-14px;left:14px;
+    background:#fff;border-radius:999px;padding:8px 16px;font-weight:800;
+    font-size:.8rem;color:var(--pink-deep);box-shadow:0 8px 20px -8px rgba(0,0,0,.2);
+  }
+
+  /* sections */
+  section{padding:56px 0}
+  .kicker{color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
+  section h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:6px 0 10px}
+  .lead{color:var(--plum-soft);max-width:58ch}
+
+  .card{
+    background:#fff;border-radius:var(--radius);padding:22px;
+    box-shadow:0 12px 34px -20px rgba(58,16,41,.25);
+  }
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+  /* feeds */
+  .feed-empty{
+    border:2px dashed #FFB6DC;border-radius:var(--radius);padding:34px;text-align:center;
+    color:var(--plum-soft);background:#FFF2F9;font-weight:600;
+  }
+  .video-frame{aspect-ratio:16/9;width:100%;border:0;border-radius:16px;background:#FFE3F1}
+
+  /* dance */
+  .champ-banner{
+    background:linear-gradient(120deg,var(--pink) 0%,var(--pink-deep) 70%);
+    color:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:1.3fr .7fr;gap:20px;align-items:center;
+  }
+  .champ-banner h3{font-size:1.7rem}
+  .champ-banner p{opacity:.92}
+  .countdown{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+  .count-cell{background:rgba(255,255,255,.16);border-radius:14px;padding:12px 14px;text-align:center;min-width:70px}
+  .count-cell b{display:block;font-family:"Baloo 2";font-size:1.6rem;font-variant-numeric:tabular-nums}
+  .count-cell small{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  .gallery img{border-radius:18px;border:4px solid #fff;box-shadow:0 10px 26px -14px rgba(0,0,0,.28);aspect-ratio:3/4;object-fit:cover;width:100%}
+
+  /* tips */
+  .tip{border-top:5px solid var(--pink);}
+  .tip h3{font-size:1.05rem;margin-bottom:6px}
+  .tip p{font-size:.93rem;color:var(--plum-soft)}
+  .tip .num{font-size:1.5rem}
+
+  /* vanity */
+  #vanity .card{padding:28px}
+  .vanity-stage{display:grid;grid-template-columns:1fr 300px;gap:24px;margin-top:18px}
+  .canvas-holder{
+    background:#FFF2F9;border-radius:18px;min-height:340px;display:flex;
+    align-items:center;justify-content:center;overflow:hidden;position:relative;
+  }
+  #vanityCanvas{max-width:100%;max-height:520px;border-radius:14px;display:none}
+  .canvas-hint{color:var(--plum-soft);font-weight:600;text-align:center;padding:30px}
+  .looks{display:flex;flex-direction:column;gap:10px}
+  .look-btn{
+    border:2px solid #FFC9E4;background:#fff;border-radius:14px;padding:11px 14px;
+    font-family:"Nunito";font-weight:800;color:var(--plum);cursor:pointer;text-align:left;
+    transition:all .15s ease;font-size:.92rem;
+  }
+  .look-btn:hover{border-color:var(--pink)}
+  .look-btn.active{background:var(--pink);border-color:var(--pink);color:#fff}
+  .vanity-controls{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+  .vanity-controls input[type=range]{flex:1;accent-color:var(--pink)}
+  .file-label{
+    display:inline-block;background:var(--pink);color:#fff;font-weight:800;
+    border-radius:999px;padding:11px 22px;cursor:pointer;box-shadow:var(--shadow);
+  }
+  .file-label input{display:none}
+  .privacy-note{margin-top:12px;font-size:.8rem;color:var(--plum-soft);background:#FFF2F9;border-radius:12px;padding:10px 14px}
+
+  /* closet */
+  .closet-card{overflow:hidden;padding:0}
+  .closet-card img{aspect-ratio:3/4;object-fit:cover;width:100%}
+  .closet-card .cap{padding:14px 16px}
+  .closet-card .cap b{font-family:"Baloo 2";font-size:1rem}
+  .closet-card .cap p{font-size:.85rem;color:var(--plum-soft)}
+
+  /* music */
+  .player{display:flex;flex-direction:column;gap:10px}
+  .track{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:#FFF2F9;border-radius:14px;padding:12px 16px;font-weight:700;
+  }
+  .track button{
+    background:var(--pink);border:0;color:#fff;border-radius:999px;width:42px;height:42px;
+    font-size:1rem;cursor:pointer;font-weight:800;
+  }
+
+  footer{padding:44px 0 60px;text-align:center;color:var(--plum-soft);font-size:.85rem}
+  footer b{color:var(--pink-deep)}
+
+  @media (max-width: 840px){
+    .hero,{grid-template-columns:1fr}
+    .hero{grid-template-columns:1fr}
+    .grid-2,.grid-3,.gallery{grid-template-columns:1fr 1fr}
+    .vanity-stage{grid-template-columns:1fr}
+    .champ-banner{grid-template-columns:1fr}
+    .countdown{justify-content:flex-start}
+  }
+  @media (max-width: 540px){
+    .grid-2,.grid-3,.gallery{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Jewel<span>✦</span>Monet</a>
+    <div class="nav-links">
+      <a href="#watch">Watch</a>
+      <a href="#dance">Dance</a>
+      <a href="#tips">Makeup Tips</a>
+      <a href="#vanity">Vanity Project</a>
+      <a href="#closet">Closet</a>
+      <a href="#music">Music</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <span class="hero-badge">✨ National Champion · Dancer · Beauty Girl</span>
+      <h1>The Jewel Monet <em>Show 💋</em></h1>
+      <p>Makeup that survives Friday-night lights, dance-team life from a national
+         champion, and a closet full of looks. Pull up a chair to the vanity:
+         you're one of the girls now.</p>
+      <div class="hero-cta">
+        <a class="btn btn-pink" href="#watch">▶ Watch the show</a>
+        <a class="btn btn-ghost" href="#vanity">Try the Vanity Project</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/jewel-smile.jpg" alt="Jewel Monet smiling in her red sequin performance hat">
+    </div>
+  </div>
+</header>
+
+<section id="watch" class="wrap">
+  <span class="kicker">The show</span>
+  <h2>Watch 📺</h2>
+  <p class="lead">New episodes on YouTube: tutorials, get-ready-with-me's, and dance-life vlogs.</p>
+  <div class="grid-2" style="margin-top:20px">
+    <div class="card" id="youtubeSlot">
+      <div class="feed-empty">🎬 The YouTube channel opens soon!<br>First episode is in the studio right now.</div>
+    </div>
+    <div class="card" id="tiktokSlot">
+      <div class="feed-empty">🎵 TikTok feed lands here the day the handle goes live. Stay cute, stay tuned.</div>
+    </div>
+  </div>
+</section>
+
+<section id="dance" class="wrap">
+  <span class="kicker">Dance team life</span>
+  <h2>Defending the Crown 👑</h2>
+  <div class="champ-banner" style="margin-top:18px">
+    <div>
+      <h3>National Champions 🏆</h3>
+      <p>We brought the title home last season. In March we defend it in Orlando,
+         and the road there is the whole story of this year's show.</p>
+    </div>
+    <div>
+      <div class="countdown" id="countdown" aria-label="Countdown to nationals in Orlando">
+        <div class="count-cell"><b id="cdDays">—</b><small>days</small></div>
+        <div class="count-cell"><b id="cdHours">—</b><small>hours</small></div>
+        <div class="count-cell"><b id="cdMins">—</b><small>mins</small></div>
+      </div>
+      <p style="text-align:right;margin-top:8px;font-size:.8rem;opacity:.9">until Orlando · March</p>
+    </div>
+  </div>
+  <div class="gallery">
+    <img src="assets/jewel-hat.jpg" alt="Jewel tipping her red sequin performance hat on the field">
+    <img src="assets/jewel-field.jpg" alt="Jewel posing on the football field with red and gold poms">
+    <img src="assets/jewel-walk.jpg" alt="Jewel walking the field, hat tipped forward">
+  </div>
+</section>
+
+<section id="tips" class="wrap">
+  <span class="kicker">Beauty desk</span>
+  <h2>Makeup Tips 💄</h2>
+  <p class="lead">Real tips from a girl who performs under stadium lights, from school-day
+     soft to game-day bold. Full tutorials live on the show.</p>
+  <div class="grid-3" style="margin-top:20px">
+    <div class="card tip"><div class="num">💋</div><h3>Performance lips that LAST</h3><p>Lip liner all over first, blot, then lipstick. Two quarters and a halftime later? Still perfect.</p></div>
+    <div class="card tip"><div class="num">🧴</div><h3>Sweat-proof your base</h3><p>Thin layers beat one thick one. Prime, breathe, set with powder only where you actually shine.</p></div>
+    <div class="card tip"><div class="num">⏰</div><h3>The 5-minute school face</h3><p>Brows, mascara, cream blush, gloss. Done. Save the full glam for Friday. Your skin will thank you.</p></div>
+    <div class="card tip"><div class="num">👁️</div><h3>Lashes under lights</h3><p>Stadium lights eat subtle. A dramatic lash reads from row 30. That's why performers go big.</p></div>
+    <div class="card tip"><div class="num">😁</div><h3>Braces? Flex them.</h3><p>Bold lip colors frame a braces smile beautifully. Cool-toned reds are the secret. Own it. 😁</p></div>
+    <div class="card tip"><div class="num">🌙</div><h3>Take it OFF right</h3><p>The real skincare tip: never sleep in performance makeup. Double cleanse, and your future face says thanks.</p></div>
+  </div>
+</section>
+
+<section id="vanity" class="wrap">
+  <span class="kicker">Play station</span>
+  <h2>Jewel's Vanity Project 🪞</h2>
+  <p class="lead">Upload a pic and try on looks. Everything happens right on your phone.
+     Your photo never leaves your device, promise.</p>
+  <div class="card" style="margin-top:20px">
+    <label class="file-label">📸 Upload your pic
+      <input type="file" id="vanityUpload" accept="image/*">
+    </label>
+    <div class="vanity-stage">
+      <div class="canvas-holder">
+        <p class="canvas-hint" id="canvasHint">Your photo appears here ✨<br>Pick a look from the menu →</p>
+        <canvas id="vanityCanvas"></canvas>
+      </div>
+      <div>
+        <div class="looks" id="lookButtons"></div>
+        <div class="vanity-controls">
+          <span style="font-weight:800;font-size:.85rem">Intensity</span>
+          <input type="range" id="intensity" min="0" max="100" value="70">
+        </div>
+        <div class="vanity-controls">
+          <button class="look-btn" id="downloadBtn" style="width:100%;text-align:center">⬇ Save my look</button>
+        </div>
+      </div>
+    </div>
+    <p class="privacy-note">🔒 The Vanity Project runs entirely in your browser. Photos are never uploaded, stored, or seen by anyone but you.</p>
+  </div>
+</section>
+
+<section id="closet" class="wrap">
+  <span class="kicker">Wardrobe</span>
+  <h2>J Monet's Closet 👗</h2>
+  <p class="lead">Looks I'm loving, from field sparkle to everyday fits. New drops as the show grows.</p>
+  <div class="grid-3" style="margin-top:20px">
+    <div class="card closet-card">
+      <img src="assets/jewel-field.jpg" alt="Red and white performance uniform with gold poms">
+      <div class="cap"><b>Friday Lights Sparkle ✨</b><p>Red sequins + white fringe + gold poms. The uniform that won a national title.</p></div>
+    </div>
+    <div class="card closet-card">
+      <img src="assets/jewel-hat.jpg" alt="Red sequin performance hat look">
+      <div class="cap"><b>The Signature Hat 🤠</b><p>You can't have main-character energy without a signature. This is mine.</p></div>
+    </div>
+    <div class="card closet-card">
+      <img src="assets/jewel-walk.jpg" alt="Full performance look from behind, walking the field">
+      <div class="cap"><b>The Walk-Off 💫</b><p>Every look needs an exit. More closet drops coming with the show.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="music" class="wrap">
+  <span class="kicker">Soundtrack</span>
+  <h2>The Show's Music 🎧</h2>
+  <p class="lead">Original tracks made for the show. Press play and get ready with me.</p>
+  <div class="card player" id="playerBox" style="margin-top:20px">
+    <div class="feed-empty" id="musicEmpty">🎹 The theme song is literally in the studio right now. First listen drops here.</div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p><b>The Jewel Monet Show</b> · made with 💖 by Team Monet</p>
+  <p style="margin-top:6px">© <span id="year"></span> The Jewel Monet Show. All the sparkle reserved.</p>
+</footer>
+
+<script>
+/* ------------------------------------------------------------------ *
+ * CONFIG — Dad fills these in as they go live. Everything downstream
+ * lights up automatically; empty string = cute "coming soon" card.
+ * ------------------------------------------------------------------ */
+const CONFIG = {
+  // YouTube channel ID (starts with "UC..."). Found at youtube.com/account_advanced.
+  youtubeChannelId: "",
+  // TikTok username WITHOUT the @
+  tiktokUsername: "",
+  // Original tracks only (files in assets/audio/). Example:
+  // { title: "The Jewel Monet Theme", file: "assets/audio/theme.mp3" }
+  tracks: [],
+  // Nationals date (Orlando). Update when the exact date is announced.
+  nationalsDate: "2027-03-05T09:00:00-05:00",
+};
+
+/* ---------- feeds ---------- */
+if (CONFIG.youtubeChannelId) {
+  document.getElementById("youtubeSlot").innerHTML =
+    `<iframe class="video-frame" loading="lazy"
+      src="https://www.youtube.com/embed?listType=user_uploads&list=${encodeURIComponent(CONFIG.youtubeChannelId)}"
+      title="The Jewel Monet Show on YouTube" allowfullscreen></iframe>`;
+}
+if (CONFIG.tiktokUsername) {
+  document.getElementById("tiktokSlot").innerHTML =
+    `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@${CONFIG.tiktokUsername}"
+       data-unique-id="${CONFIG.tiktokUsername}" data-embed-type="creator" style="max-width:780px;min-width:288px">
+       <section><a target="_blank" href="https://www.tiktok.com/@${CONFIG.tiktokUsername}">@${CONFIG.tiktokUsername}</a></section>
+     </blockquote>`;
+  const s = document.createElement("script");
+  s.src = "https://www.tiktok.com/embed.js"; s.async = true;
+  document.body.appendChild(s);
+}
+
+/* ---------- countdown ---------- */
+(function () {
+  const target = new Date(CONFIG.nationalsDate).getTime();
+  function tick() {
+    const d = target - Date.now();
+    if (Number.isNaN(target) || d <= 0) return;
+    document.getElementById("cdDays").textContent = Math.floor(d / 864e5);
+    document.getElementById("cdHours").textContent = Math.floor(d % 864e5 / 36e5);
+    document.getElementById("cdMins").textContent = Math.floor(d % 36e5 / 6e4);
+  }
+  tick(); setInterval(tick, 30_000);
+})();
+
+/* ---------- music player ---------- */
+if (CONFIG.tracks.length > 0) {
+  const box = document.getElementById("playerBox");
+  box.innerHTML = "";
+  const audio = new Audio();
+  let playingBtn = null;
+  for (const t of CONFIG.tracks) {
+    const row = document.createElement("div");
+    row.className = "track";
+    row.innerHTML = `<span>🎵 ${t.title}</span>`;
+    const btn = document.createElement("button");
+    btn.textContent = "▶";
+    btn.setAttribute("aria-label", `Play ${t.title}`);
+    btn.onclick = () => {
+      if (playingBtn === btn && !audio.paused) { audio.pause(); btn.textContent = "▶"; return; }
+      if (playingBtn) playingBtn.textContent = "▶";
+      audio.src = t.file; audio.play(); btn.textContent = "⏸"; playingBtn = btn;
+    };
+    audio.addEventListener("ended", () => { if (playingBtn) playingBtn.textContent = "▶"; });
+    row.appendChild(btn);
+    box.appendChild(row);
+  }
+}
+
+/* ---------- Vanity Project (100% in-browser) ---------- */
+const LOOKS = [
+  { name: "💄 Bold Red Glam",  filter: "contrast(1.08) saturate(1.25) brightness(1.03)", tint: "rgba(226,42,86,0.16)",  blend: "soft-light" },
+  { name: "🌸 Soft Glow",      filter: "brightness(1.08) saturate(1.05) blur(0.4px)",    tint: "rgba(255,182,220,0.22)", blend: "screen" },
+  { name: "✨ Golden Hour",    filter: "sepia(0.25) saturate(1.2) brightness(1.05)",     tint: "rgba(240,185,58,0.18)",  blend: "soft-light" },
+  { name: "🖤 Editorial B&W",  filter: "grayscale(1) contrast(1.15) brightness(1.02)",   tint: "rgba(255,79,163,0.10)",  blend: "soft-light" },
+  { name: "❄️ Icy Chic",       filter: "saturate(0.9) brightness(1.06) hue-rotate(-8deg)", tint: "rgba(150,200,255,0.16)", blend: "screen" },
+  { name: "🧼 No-Makeup Clean", filter: "none", tint: "rgba(0,0,0,0)", blend: "normal" },
+];
+
+const canvas = document.getElementById("vanityCanvas");
+const ctx = canvas.getContext("2d");
+const hint = document.getElementById("canvasHint");
+const intensityEl = document.getElementById("intensity");
+let baseImage = null;
+let activeLook = LOOKS[LOOKS.length - 1];
+
+const lookBox = document.getElementById("lookButtons");
+for (const look of LOOKS) {
+  const b = document.createElement("button");
+  b.className = "look-btn";
+  b.textContent = look.name;
+  b.onclick = () => {
+    activeLook = look;
+    for (const el of lookBox.children) el.classList.remove("active");
+    b.classList.add("active");
+    render();
+  };
+  lookBox.appendChild(b);
+}
+lookBox.lastChild.classList.add("active");
+
+document.getElementById("vanityUpload").addEventListener("change", (e) => {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+  img.onload = () => {
+    baseImage = img;
+    const maxW = 900;
+    const scale = Math.min(1, maxW / img.width);
+    canvas.width = Math.round(img.width * scale);
+    canvas.height = Math.round(img.height * scale);
+    canvas.style.display = "block";
+    hint.style.display = "none";
+    render();
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
+});
+
+intensityEl.addEventListener("input", render);
+
+function render() {
+  if (!baseImage) return;
+  const k = intensityEl.value / 100;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Base pass with the look's filter, scaled by intensity via a two-draw mix.
+  ctx.globalCompositeOperation = "source-over";
+  ctx.filter = "none";
+  ctx.globalAlpha = 1;
+  ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
+  if (activeLook.filter !== "none" && k > 0) {
+    ctx.filter = activeLook.filter;
+    ctx.globalAlpha = k;
+    ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
+    ctx.filter = "none";
+    ctx.globalAlpha = 1;
+  }
+  // Color-wash layer (the "makeup" tone), intensity-scaled.
+  if (activeLook.tint !== "rgba(0,0,0,0)" && k > 0) {
+    ctx.globalCompositeOperation = activeLook.blend;
+    ctx.globalAlpha = k;
+    ctx.fillStyle = activeLook.tint;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.globalCompositeOperation = "source-over";
+    ctx.globalAlpha = 1;
+  }
+}
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  if (!baseImage) { alert("Upload a pic first! 📸"); return; }
+  const a = document.createElement("a");
+  a.download = "my-vanity-look.png";
+  a.href = canvas.toDataURL("image/png");
+  a.click();
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
